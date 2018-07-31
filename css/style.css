@@ -1,0 +1,280 @@
+@charset "UTF-8";
+* {
+  font-family: "Open Sans", sans-serif, "微軟正黑體";
+}
+
+html, body {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+header {
+  position: relative;
+  background-color: #F47C2C;
+  text-align: center;
+}
+header .icon {
+  width: 80%;
+  max-width: 350px;
+  padding: 250px 0px;
+}
+header .marginbottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  right: 0px;
+  animation: upin 2s both;
+}
+@keyframes upin {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+header .arrow_left {
+  position: absolute;
+  width: 20%;
+  max-width: 60px;
+  top: 40%;
+  right: 10%;
+}
+header .view {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  top: 80%;
+  color: #424242;
+  opacity: 0;
+  transition: 0.5s;
+}
+header .view:after {
+  display: block;
+  content: "v";
+  color: #00F7B1;
+  transform: scaleX(1.2) scaleY(0.5);
+}
+header .view.at_top {
+  opacity: 1;
+}
+
+nav.navbar {
+  transition: 0.5s;
+}
+nav.navbar a {
+  transition: 0.5s;
+}
+
+nav.navbar.at_top {
+  background-color: transparent;
+}
+nav.navbar.at_top a, nav.navbar.at_top a:visited {
+  color: #fff;
+  font-weight: 600;
+}
+
+section {
+  padding: 60px;
+  position: relative;
+}
+
+section#section_about {
+  background-color: #E8DBCA;
+}
+section#section_about .marginbottom {
+  position: absolute;
+  bottom: -80px;
+  width: 100%;
+  left: -20px;
+  z-index: 1;
+}
+section#section_about #shiba {
+  width: 30%;
+  max-width: 300px;
+  position: absolute;
+  right: 25px;
+  bottom: 0px;
+  transform: translateX(-50%);
+}
+section#section_about #ball {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+}
+section#section_about .container {
+  transform: rotate(15deg) scale(0.9);
+}
+section#section_about .row {
+  height: 150px;
+  color: #424242;
+}
+section#section_about .row .text01 {
+  font-size: 35px;
+  transition: 0.1s;
+}
+section#section_about .row .text02 {
+  font-size: 80px;
+  transition: 0.2s;
+}
+section#section_about .row .text03 {
+  font-size: 50px;
+  transition: 0.3s;
+}
+section#section_about .pic-arrow {
+  width: 100px;
+  margin-top: 0px;
+  margin-left: 400px;
+  transform: rotate(-15deg);
+}
+
+section#section_skills {
+  background-color: #fff;
+}
+section#section_skills .col-sm-6 {
+  text-align: center;
+}
+section#section_skills h3 {
+  color: #F47C2C;
+}
+section#section_skills .icon-skills {
+  width: 60%;
+}
+
+section#section_works {
+  background-color: #fff;
+}
+section#section_works .marginbottom {
+  position: absolute;
+  top: 93%;
+  width: 100%;
+  left: -20px;
+  z-index: 5;
+}
+section#section_works .work {
+  height: 230px;
+  cursor: pointer;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+}
+@media screen and (max-width: 700px) {
+  section#section_works .work {
+    height: 460px;
+  }
+}
+section#section_works .work.big {
+  height: 460px;
+}
+section#section_works .work:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+  opacity: 0;
+  transition: 0.5s;
+}
+section#section_works .work .text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 8;
+  opacity: 0;
+  transition: 0.5s;
+}
+section#section_works .work:hover:before, section#section_works .work:hover .text {
+  opacity: 1;
+}
+section#section_works .work img {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 700px) {
+  section#section_works .work img {
+    height: auto;
+    width: 110%;
+  }
+}
+
+section#section_contacts {
+  background-color: #E8DBCA;
+  color: #424242;
+  overflow: hidden;
+}
+section#section_contacts .dog {
+  width: 150px;
+  position: absolute;
+  bottom: 0px;
+  transition: 0.3s;
+}
+section#section_contacts #dog_orange {
+  right: 170px;
+}
+section#section_contacts #dog_white {
+  right: 280px;
+  bottom: -30px;
+}
+section#section_contacts #dog_black {
+  right: 60px;
+  bottom: -20px;
+}
+section#section_contacts .mails {
+  height: 400px;
+}
+section#section_contacts .mails .mailself {
+  background-color: #fff;
+  padding: 20px;
+  padding-left: 40px;
+  position: absolute;
+  width: 90%;
+  transform: translate(-30px);
+}
+section#section_contacts .mails .mailcover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 70%;
+  transform: rotate(5deg) scale(1.9) translate(-50%, -50%);
+}
+section#section_contacts .mails .mailcover img {
+  width: 120%;
+}
+section#section_contacts input, section#section_contacts textarea {
+  display: block;
+  background-color: transparent;
+  border: none;
+  border: 3px solid #424242;
+}
+section#section_contacts textarea {
+  height: 140px;
+  width: 100%;
+}
+
+footer {
+  position: relative;
+  background-color: #00F7B1;
+  text-align: center;
+}
+footer .icon {
+  width: 80%;
+  max-width: 350px;
+  padding: 80px 0px;
+}
